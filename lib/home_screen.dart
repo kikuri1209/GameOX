@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/game_screen.dart';
+import 'package:untitled/review.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -126,6 +127,34 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: EdgeInsets.symmetric(vertical: 17, horizontal: 20),
                   child: Text(
                     "เริ่มเกม",
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+              InkWell(
+                onTap: () {
+
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              Review()
+                        ));
+
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.grey,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  padding: EdgeInsets.symmetric(vertical: 17, horizontal: 20),
+                  child: Text(
+                    "ความคิดเห็น",
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
